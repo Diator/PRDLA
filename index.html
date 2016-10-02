@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+            <link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+                <link href="/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+                    <link href="/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+                        <link href="/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+                            <link href="/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+                                <link href="/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+                                    <link href="/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+                                        <link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+                                            <link href="/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+                                                <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+                                                    <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+                                                        <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+                                                            <link href="/manifest.json" rel="manifest">
+                                                                <meta content="#ffffff" name="msapplication-TileColor">
+                                                                    <meta content="/ms-icon-144x144.png" name="msapplication-TileImage">
+                                                                        <meta content="#ffffff" name="theme-color">
+                                                                            <meta charset="utf-8">
+                                                                                <meta content="IE=edge" http-equiv="X-UA-Compatible">
+                                                                                    <meta content="width=device-width, initial-scale=1" name="viewport">
+                                                                                        <meta content="" name="description">
+                                                                                            <meta content="" name="author">
+                                                                                                <title>
+                                                                                                    Grayscale - Start Bootstrap Theme
+                                                                                                </title>
+                                                                                                <!-- Bootstrap Core CSS -->
+                                                                                                <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                                                                                                    <!-- Custom Fonts -->
+                                                                                                    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+                                                                                                        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+                                                                                                            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+                                                                                                                <!-- Theme CSS -->
+                                                                                                                <link href="css/grayscale.css" rel="stylesheet">
+                                                                                                                    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                                                                                                                    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                                                                                                                    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+                                                                                                                </link>
+                                                                                                            </link>
+                                                                                                        </link>
+                                                                                                    </link>
+                                                                                                </link>
+                                                                                            </meta>
+                                                                                        </meta>
+                                                                                    </meta>
+                                                                                </meta>
+                                                                            </meta>
+                                                                        </meta>
+                                                                    </meta>
+                                                                </meta>
+                                                            </link>
+                                                        </link>
+                                                    </link>
+                                                </link>
+                                            </link>
+                                        </link>
+                                    </link>
+                                </link>
+                            </link>
+                        </link>
+                    </link>
+                </link>
+            </link>
+        </link>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        var keyword = "Puerto Rico";
+
+    $(document).ready(function(){
+
+        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+        {
+            tags: keyword,
+            tagmode: "any",
+            format: "json"
+        },
+        function(data) {
+            var rnd = Math.floor(Math.random() * data.items.length);
+
+            var image_src = data.items[rnd]['media']['m'].replace("_m", "_b");
+
+            $('.intro').removeClass().fadeTo(400, 2).addClass("intro").css('background-image', "url('" + image_src + "')").fadeTo(400, 1);
+
+
+
+        });
+
+    });
+    </script>
+    <body data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".navbar-main-collapse" data-toggle="collapse" type="button">
+                        Menu
+                        <i class="fa fa-bars">
+                        </i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <i class="fa fa-camera">
+                        </i>
+                        <span class="light">
+                            Helix Development
+                        </span>
+                        <h1>
+                            Puerto Rico Desde La Azotea
+                        </h1>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#panorama">
+                                Panorama
+                            </a>
+                        </li>
+                        <!-- <li>
+                        <a class="page-scroll" href="#download"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact"></a>
+                    </li>  -->
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading">
+                            Welcome
+                            </h1>
+                            <p class="intro-text">
+                            "Puerto Rico Desde La Azotea" is a panorama viewer Website looking through the rooftops of Puerto Rico. 
+                            </p>
+                            <a class="btn btn-circle page-scroll" href="#panorama">
+                                <i class="fa fa-angle-double-down animated">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="panorama" class="pano">
+            
+                        <iframe allowfullscreen="" width="1400" height="1400" src="../src/standalone/pannellum.htm?panorama=../../examples/examplepano.jpg&preview=../../examples/examplepano-preview.jpg" style="border-style:none;" >
+                        </iframe>
+        </section>
+        <!-- About Section -->
+        <!-- <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Grayscale</h2>
+                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section 
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+        <!-- Contact Section -->
+        <!-- <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section> -->
+        <!-- Map Section -->
+        <div id="map">
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container text-center">
+                <p>
+                    Copyright © Helix Dev 2016
+                </p>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.js">
+        </script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js">
+        </script>
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
+        </script>
+        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false" type="text/javascript">
+        </script>
+        <!-- Theme JavaScript -->
+        <script src="js/grayscale.min.js">
+        </script>
+    </body>
+</html>
