@@ -178,14 +178,14 @@ a:focus {
   }
 }
 .pano{
-  display: table;
+  /*display: table;*/
   /*width: 100%;*/
   /*height: auto;
   
   text-align: center;
   color: white;
   /*background: url(http://farm6.staticflickr.com/5093/30021810665_7b7c67df95_b.jpg) no-repeat bottom center scroll;*/
-  padding: 50px 0;
+  padding: 50px;
   /*background: url(../img/Cover_Test.jpg) no-repeat bottom center scroll;*/
   background-color: black;
 }
